@@ -1,0 +1,30 @@
+<html>
+<head>
+    <style>
+        body {background-color: #ffcc66;}
+        h1 {font-family: "Arial", Arial, sans-serif;}
+        h1 {font-style: bold,;}
+        h1 {font-size: 24px;}
+        ol {font-style: normal;}
+        li {font-style: italic;}
+    </style>
+</head>
+<body>
+
+<h1>
+{{name}}'s Blog Messages:
+</h1>
+
+<ol>
+    {{#messages}}
+    <li>{{blogPost}}</li>
+    {{/messages}}
+</ol>
+
+<form action="/create-message" method="post">
+    <input type="text" placeholder="Post new blog..." name="createMessage"/>
+    <button type="submit">Add Post</button>
+</form>
+
+</body>
+</html>
